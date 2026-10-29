@@ -1,57 +1,47 @@
-# Nightscout xDrip
-> Enhanced personal research version of xDrip
+# xDripSaf
 
- <img align="right" src="Documentation/images/download-xdrip-plus-qr-code.png">
- Info page and APK download: https://jamorham.github.io/#xdrip-plus
+A fork of [xDrip+](https://github.com/NightscoutFoundation/xDrip), the Android app published by the
+Nightscout Foundation that collects, displays and shares data from continuous glucose monitors.
 
-<img align="right" src="https://travis-ci.org/jamorham/xDrip-plus.svg?branch=master"><a align="right" title="Crowdin" target="_blank" href="https://crowdin.com/project/xdrip"><img align="right" src="https://badges.crowdin.net/xdrip/localized.svg"></a>
+> **Status: in development. No version is available yet.**
+> For a working app, use the official xDrip+:
+> [download and info page](https://jamorham.github.io/#xdrip-plus) and
+> [documentation](https://xdrip.readthedocs.io).
 
-## Features
-* Voice, Keypad or Watch input of Treatments (Insulin/Carbs/Notes)
-* Visualization of Insulin and Carb action curves + Undo/Redo
-* Improved alerts and predictive low forecasting feature
-* Instant data synchronization between phones and tablets
-* Support for many different data sources
-* Published by the Nightscout Foundation
+## What this fork works on
 
- <img align="middle" src="https://jamorham.github.io/images/jamorham-natural-language-treatments-two-web.png">
+- The Wear OS watch app: watch faces and complications on current watches.
+- Current Android versions, on the phone and on the watch.
+- A friendlier design.
+- One-minute readings, for data sources that deliver them.
 
-## What does it do?
+The starting point and plans are in [Documentation/fork/README.md](Documentation/fork/README.md).
 
-xDrip is an unofficial and independent Android app which works as data hub and processor between many different devices.
+## Relationship to xDrip+
 
-It supports wireless connections to G6, G7, Medtrum A6, Libre via NFC and Bluetooth, 630G, 640G, 670G pumps, CareSens Air and Eversense CGM via companion apps. Bluetooth Glucose Meters such as the Contour Next One, AccuChek Guide, Verio Flex & Diamond Mini as well as devices like the Pendiq 2.0 Insulin Pen.
+- The fork follows upstream `master` and merges its changes regularly.
+- Anything the fork notes do not mention works as in xDrip+, and the
+  [xDrip+ documentation](https://xdrip.readthedocs.io) and
+  [upstream README](https://github.com/NightscoutFoundation/xDrip#readme) apply.
+- Ideas taken from other forks are credited in the fork notes and in the commits that bring them.
 
-Heart-rate and step counter data is processed from Android Wear, Garmin, Fitbit and Pebble smart-watches and watch-faces for those that show glucose values and graphs.
+## Versions and releases
 
-On some Android Wear watches, it is possible for the G6 to talk directly to the watch so it can display values even when out of range of the phone.
+- Versions are annotated git tags `vMAJOR.MINOR.PATCH`. They stay at `0.x` while the fork is in
+  development.
+- Each version is published under [Releases](https://github.com/safon686/xDripSaf/releases). Its
+  notes name the upstream version it is based on.
+- Upstream's date tags (for example `2026.10.23`) belong to xDrip+ and are not this fork's
+  versions.
+- No version has been tagged yet.
 
-The app contains sophisticated charting, customization and data entry features as well as a predictive simulation model.
+## Safety
 
-Instant two-way synchronization is possible by linking follower handsets, data can also be uploaded and downloaded to a Nightscout web service or uploaded directly to Tidepool, MongoDB or InfluxDB.
+Neither xDrip+ nor this fork is a medical device or approved by any regulator. Do not base
+treatment decisions on them alone; check readings with a blood glucose meter. Use at your own risk:
+the software comes with no warranty (GPL-3.0, sections 15 and 16).
 
-Customization allows for different options to configure alarms, vocalize readings, change the display preferences etc. International users can update translations from within the app too.
+## License
 
-Your data is yours and can be exported in many different ways. xDrip also intercommunicates with other apps, for example sending and receiving live data with AndroidAPS.
-
-
-## Ethos
-* Developed using Rapid Prototyping methodology
-* Immediate results favoured to prove concepts
-* Designed to support my personal research goals
-* User Choice always a high priority
-* No registration or Internet access required
-* Community testing and collaboration appreciated!
-
-## Roadmap
-* Calibration improvements
-* Supporting the large family of devices
-* Increasing automation and data backup and sync options
-* More Nightscout and APS integration
-
-## Collaboration
-We are very happy if people want to collaborate with this project. Please contact us at [Discussions](https://github.com/NightscoutFoundation/xDrip/discussions) if you want to get involved and study the [collaboration guidelines](CONTRIBUTING.md) before submitting any patches or pull requests.
-
-## Thanks
-None of this would be possible without all the hard work of the xDrip and Nightscout communities who have developed such excellent software and allowed us to build upon it.
-
+GPL-3.0, see [LICENSE](LICENSE). The original code remains copyright of its authors, the xDrip and
+xDrip+ contributors.
